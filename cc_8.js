@@ -81,3 +81,14 @@ console.log(`Expected Output: ${filterTransactions}`);// Expected output: [1500,
 //Test Data:
 filterLargeTransactions(transactions, amount => amount > 1000);
 
+//Task 7 - Shopping Cart Tracker
+//Write a function createCartTracker() that returns another function to add items and maintain a running total.
+function createCartTracker() {
+    let value =0;
+    return function (price) { value += price;
+        return `Total Cart Value: $${value.toFixed(2)}`;};}
+//Test Data:
+let cart = createCartTracker();
+console.log(cart(20)); // Expected output: "Total Cart Value: $20"
+console.log(cart(35)); // Expected output: "Total Cart Value: $55"
+
