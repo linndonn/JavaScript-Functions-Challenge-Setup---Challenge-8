@@ -57,3 +57,15 @@ const cargroup = {
 //Test Data:
 console.log(calculateRentalCost(3, "Economy", true)); // Expected output: "Total Rental Cost: $180"
 console.log(calculateRentalCost(5, "Luxury", false)); // Expected output: "Total Rental Cost: $500"
+
+//Task 5 - Loan Payment Calculation.
+//Write a function calculateLoanPayment(principal, rate, time) that returns total loan payment.
+function calculateLoanPayment(principal, rate, time) {
+    //Formula:
+    totalPayment = principal + (principal * rate * time);
+    //Produce the result as a string in the format "Total Payment: $X.XX".
+    return `Total Payment: $${totalPayment.toFixed(2)}`;}
+//Test Data:
+console.log(calculateLoanPayment(1000, 0.05, 2)); // Expected output: "Total Payment: $1100.00"
+console.log(calculateLoanPayment(5000, 0.07, 3)); // Expected output: "Total Payment: $6050.00"
+
